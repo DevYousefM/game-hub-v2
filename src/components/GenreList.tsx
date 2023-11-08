@@ -10,13 +10,12 @@ import {
 import useGenres from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 import GenreListSkeleton from "./GenreListSkeleton";
+import useGameQueryStore from "../store";
 
-interface Props {
-  onSelectGenreId: (genre: number) => void;
-  selectedGenreId?: number;
-}
-
-const GenreList = ({ onSelectGenreId, selectedGenreId }: Props) => {
+const GenreList = () => {
+  const selectedGenreId = useGameQueryStore((s) => s.gameQuery.genreId);
+  const setGenreId = useGameQueryStore((s) => s.setGenreId);
+  
   const { data, error, isLoading } = useGenres();
   let skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const bg = useColorModeValue("gray.100", "gray.700");
@@ -46,10 +45,12 @@ const GenreList = ({ onSelectGenreId, selectedGenreId }: Props) => {
               cursor: "pointer",
             }}
             backgroundColor={
-              selectedGenreId && selectedGenreId == genre.id ? bg : "transparent"
+              selectedGenreId && selectedGenreId == genre.id
+                ? bg
+                : "transparent"
             }
             onClick={() => {
-              onSelectGenreId(genre.id);
+              setGenreId(genre.id);
             }}
             key={genre.id}
             padding="5px"
