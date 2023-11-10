@@ -1,4 +1,4 @@
-import { Game } from "../hooks/useGames";
+import { Game } from "../interfaces/Game";
 import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
@@ -13,9 +13,7 @@ interface Props {
 const GameCard = ({ game }: Props) => {
   return (
     <Card>
-      <Image
-        src={getCroppedImageUrl(game.background_image)}
-      ></Image>
+      <Image src={getCroppedImageUrl(game.background_image)}></Image>
       <CardBody>
         <HStack justifyContent="space-between" marginBottom={3}>
           {game.parent_platforms != undefined && (

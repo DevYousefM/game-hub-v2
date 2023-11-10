@@ -1,7 +1,9 @@
 import { Heading } from "@chakra-ui/react";
-import useGenres, { Genre } from "../hooks/useGenres";
+import useGenres from "../hooks/useGenres";
+import { Genre } from "../interfaces/Genre";
 import useLookup from "../hooks/useLookup";
-import usePlatforms, { Platform } from "../hooks/usePlatforms";
+import usePlatforms from "../hooks/usePlatforms";
+import { Platform } from "../interfaces/Platform";
 import { FetchResponse } from "../services/api-client";
 import useGameQueryStore from "../store";
 
