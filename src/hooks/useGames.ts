@@ -13,6 +13,9 @@ export interface Game {
   genres: Genre[];
   rating: number;
   rating_top: number;
+  slug: string;
+  description: string;
+  description_raw: string;
 }
 
 const apiClient = new APIClient<Game>("/games");
