@@ -1,6 +1,5 @@
-import { Badge, Box, Heading } from "@chakra-ui/react";
-import React from "react";
-import { ReactNode } from "react";
+import { Box, Heading } from "@chakra-ui/react";
+import React, { ReactNode } from "react";
 import NoEnoughData from "./NoEnoughData";
 interface Props {
   title: string;
