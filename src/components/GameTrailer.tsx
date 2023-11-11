@@ -1,3 +1,4 @@
+import { Box, Heading } from "@chakra-ui/react";
 import useTrailers from "../hooks/useTrailers";
 
 interface Props {
@@ -8,7 +9,12 @@ const GameTrailer = ({ gameId }: Props) => {
   const first = data?.results[0];
   if (isLoading) return null;
   return first ? (
-    <video src={first.data[480]} poster={first.preview} controls />
+    <Box>
+      <Heading marginBottom={6} textAlign={"center"}>
+        Game Trailer
+      </Heading>
+      <video src={first.data[480]} poster={first.preview} controls />
+    </Box>
   ) : null;
 };
 
