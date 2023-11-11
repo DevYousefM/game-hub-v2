@@ -1,7 +1,8 @@
-import { SimpleGrid, Text } from "@chakra-ui/react";
+import { Badge, SimpleGrid, Text } from "@chakra-ui/react";
 import CriticScore from "./CriticScore";
 import { Game } from "../interfaces/Game";
 import DefinitionItem from "./DefinitionItem";
+import NoEnoughData from "./NoEnoughData";
 interface Props {
   game: Game;
 }
@@ -17,7 +18,11 @@ const GameAttributes = ({ game }: Props) => {
         ))}
       </DefinitionItem>
       <DefinitionItem title="Metascore">
-        <CriticScore score={game.metacritic} />
+        {game.metacritic ? (
+          <CriticScore score={game.metacritic} />
+        ) : (
+          <NoEnoughData color="yellow" />
+        )}
       </DefinitionItem>
       <DefinitionItem title="Genres">
         {game.genres.map((genre) => (
