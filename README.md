@@ -1,4 +1,4 @@
-# Game Hub
+# Game Hub v2
 
 Game Hub - This application is a web-based platform for discovering and exploring video games from an external API. Users can search for games, filter them by genres and platforms, and sort the results for an enhanced gaming experience.
 
@@ -15,6 +15,11 @@ Game Hub - This application is a web-based platform for discovering and explorin
 
 This application allows you to explore and discover video games from an external API. You can search for games, filter them by genres and platforms, and sort the results to enhance your gaming experience.
 
+# Whats New In Game Hub v2
+- Using Zustand to centralize states
+- Using React Query to handle caching and link with API
+- Make the site contain multiple pages with React Router Dom
+
 ## Demo
 
 You can see a live demo of this project by this [link](https://game-hub-y.vercel.app/).
@@ -29,6 +34,8 @@ List the technologies and tools you used to build the project:
 - HTML/CSS
 - Chakra UI
 - Axios
+- React Query
+- Zustand
 
 ## Getting Started
 
