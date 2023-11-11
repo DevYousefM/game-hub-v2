@@ -10,7 +10,7 @@ const GameTrailer = ({ gameId }: Props) => {
   if (isLoading) return null;
   return first ? (
     <Box>
-      <Heading marginBottom={6} textAlign={"center"}>
+      <Heading marginBottom={3.5} textAlign={"center"}>
         Game Trailer
       </Heading>
       <video src={first.data[480]} poster={first.preview} controls />

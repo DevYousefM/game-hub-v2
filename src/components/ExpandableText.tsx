@@ -14,7 +14,7 @@ const ExpandableText = ({ children, maxChars = 250 }: Props) => {
     ? children
     : children.substring(0, maxChars) + "...";
   return (
-    <Text fontSize={22}>
+    <Text fontSize={20}>
       {text}
       <Button
         marginLeft={1}

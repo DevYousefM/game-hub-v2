@@ -6,7 +6,7 @@ interface Props {
   game: Game;
 }
 const GameAttributes = ({ game }: Props) => {
-  const textStyle = { fontSize: 20, fontWeight: "300" };
+  const textStyle = { fontSize: 19, fontWeight: "400" };
   return (
     <SimpleGrid as={"dl"} columns={2} spacing={6} marginTop={6}>
       <DefinitionItem title="Platforms">
