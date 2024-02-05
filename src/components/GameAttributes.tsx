@@ -1,4 +1,4 @@
-import { Badge, SimpleGrid, Text } from "@chakra-ui/react";
+import { SimpleGrid, Text } from "@chakra-ui/react";
 import CriticScore from "./CriticScore";
 import { Game } from "../interfaces/Game";
 import DefinitionItem from "./DefinitionItem";
